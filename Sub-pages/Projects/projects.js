@@ -1,5 +1,6 @@
 // Rotating hero background using project images
 
+//Rotating background images
 const images = [
     // Use your actual project image URLs here, or sample images for now
     "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
@@ -70,17 +71,9 @@ function showProjectModal(idx) {
     const imgAlt = card.querySelector('.project-image')?.getAttribute('alt') || '';
     const title = card.querySelector('h3')?.textContent || '';
     const subtitle = card.querySelector('.project-subtitle')?.textContent || '';
-    // Use a sample description as filler
-    const desc = "This is a sample project description. Replace this text with details about your project, its features, and the technologies used.";
+    const desc = card.querySelector('.project-desc')?.innerHTML || '';
     const techIcons = card.querySelector('.tech-icons')?.innerHTML || '';
-
-    // Example timeline data (replace with your real data as needed)
-    const timelines = [
-        "August 2024 - Present",
-        "June 2025 - March 2026",
-        "January 2023 - December 2023"
-    ];
-    const timeline = timelines[idx] || "Date Unknown";
+    const timeline = card.querySelector('.project-timeline')?.textContent || '';
 
     // Left: title at top, subtitle underneath, gap, then description, then tech stack, then timeline
     const modalProject = document.querySelector('.modal-project');
