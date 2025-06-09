@@ -10,6 +10,15 @@
         <script src="/js-scripts/blog.js" defer></script>
     </head>
     <body>
+        <!--
+        To add a new blog post to this blog hierarchy page:
+        1. Create a new HTML file for your blog post in the /blogs/ directory (e.g., blog-05.html).
+        2. Use the same structure as the other blog posts (see existing files for reference).
+        3. Add a new .blog-card entry below, inside the correct month/year section (or create a new <h2 class="blog-month"> if needed).
+           - Update the link, image, title, date, read time, and description.
+        4. Keep blog cards in each section sorted by date (most recent first).
+        5. Optionally, update the sitemap.xml for SEO.
+        -->
         <div id="fade-overlay"></div>
         <div id="main-content">
             <header>
@@ -22,6 +31,51 @@
                 </nav>
             </header>
             <main>
+                <section class="blog-list">
+                    <h2 class="blog-month">June 2025</h2>
+                    <div class="blog-card">
+                        <a href="/blogs/blog-04.html">
+                            <img src="/images/sample-blog-image.jpg" alt="JavaScript Tips & Tricks" class="blog-card-img">
+                        </a>
+                        <div class="blog-card-content">
+                            <a href="/blogs/blog-04.html" class="blog-card-title">JavaScript Tips & Tricks</a>
+                            <div class="blog-card-meta">June 9, 2025 &bull; 4 min read</div>
+                            <div class="blog-card-desc">Boost your productivity and code quality with these JavaScript tips and tricks. Covers ES6 features, debugging, and performance advice.</div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <a href="/blogs/blog-01.html">
+                            <img src="/images/sample-blog-image.jpg" alt="Sample Blog Post" class="blog-card-img">
+                        </a>
+                        <div class="blog-card-content">
+                            <a href="/blogs/blog-01.html" class="blog-card-title">Sample Blog Post</a>
+                            <div class="blog-card-meta">June 1, 2025 &bull; 5 min read</div>
+                            <div class="blog-card-desc">A demonstration of the Markdown-to-HTML workflow, SEO best practices, and modern portfolio blog design. Includes code samples, images, and more.</div>
+                        </div>
+                    </div>
+                    <h2 class="blog-month">May 2025</h2>
+                    <div class="blog-card">
+                        <a href="/blogs/blog-03.html">
+                            <img src="/images/sample-blog-image.jpg" alt="Understanding SEO for Developers" class="blog-card-img">
+                        </a>
+                        <div class="blog-card-content">
+                            <a href="/blogs/blog-03.html" class="blog-card-title">Understanding SEO for Developers</a>
+                            <div class="blog-card-meta">May 7, 2025 &bull; 6 min read</div>
+                            <div class="blog-card-desc">A practical guide to SEO for developers: meta tags, canonical URLs, sitemaps, and avoiding common pitfalls for better search visibility.</div>
+                        </div>
+                    </div>
+                    <h2 class="blog-month">April 2025</h2>
+                    <div class="blog-card">
+                        <a href="/blogs/blog-02.html">
+                            <img src="/images/sample-blog-image.jpg" alt="How to Build a Portfolio Website" class="blog-card-img">
+                        </a>
+                        <div class="blog-card-content">
+                            <a href="/blogs/blog-02.html" class="blog-card-title">How to Build a Portfolio Website</a>
+                            <div class="blog-card-meta">April 5, 2025 &bull; 7 min read</div>
+                            <div class="blog-card-desc">Learn the essential steps to create a modern, responsive portfolio website using HTML, CSS, and JavaScript. Covers design, layout, SEO, and deployment tips.</div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>      
         <footer>
