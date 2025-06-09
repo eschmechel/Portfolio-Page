@@ -2,26 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://eschmechel.dev/</loc>
-    <lastmod>2025-06-06</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://eschmechel.dev/projects.html</loc>
-    <lastmod>2025-06-06</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://eschmechel.dev/blog.html</loc>
-    <lastmod>2025-06-06</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eschmechel.dev/aboutme.html</loc>
-    <lastmod>2025-06-06</lastmod>
+    <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eschmechel.dev/blogs/blog-01.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eschmechel.dev/blogs/blog-02.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eschmechel.dev/blogs/blog-03.html</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eschmechel.dev/blogs/blog-04.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
