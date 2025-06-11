@@ -256,7 +256,7 @@ section a:hover {
     background: rgba(255,255,255,0.07);
 }
 .tech-icons-row img[alt="TryHackMe"] {
-    background: #21242b;
+    background: #232232ef;
     border-radius: 8px;
     padding: 4px;
 }
@@ -269,7 +269,7 @@ section a:hover {
 }
 .tech-icon[src*="AWS-services-section.png"] {
     /* Use background-size to center and scale the logo */
-    background: #fff url('https://www.bluematador.com/hs-fs/hubfs/2020/AWS/AWS-services-section.png?width=314&name=AWS-services-section.png') no-repeat center center;
+    background: #fff url('/images/logos/aws-logo.png') no-repeat center center;
     background-size: 90% 90%;
     /* Hide the actual image, show only the background */
     opacity: 0;
