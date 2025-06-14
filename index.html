@@ -21,25 +21,175 @@
             <header>
                 <h1 id="TitleCard">Elliott Schmechel</h1>
                 <h2 id="TitleDescription">Game Programmer & Developer</h2>
+                <nav>
+                    <a href="/index.html">Home</a>
+                    <a href="/projects.html">Projects</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/aboutme.html">About</a>
+                </nav>
             </header>
-            <nav>
-                <a href="/index.html">Home</a>
-                <a href="/projects.html">Projects</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/aboutme.html">About</a>
-            </nav>
             <main>
-                <section id="intro">
-                    <h2>Welcome to My Portfolio</h2>
-                    <p>This is my personal portfolio showcasing my work in game programming and development. Feel free to explore my projects and blog posts.</p>
-                </section>
-                <section id="highlights">
-                    <h2>Highlights</h2>
-                    <ul>
-                        <li><a href="/projects.html">View My Projects</a></li>
-                        <li><a href="/blog.html">Read My Blog</a></li>
-                        <li><a href="/aboutme.html">Learn More About Me</a></li>
-                    </ul>
+                <section id="mosaic-portfolio">
+                    <div class="mosaic-grid">
+                        <div class="mosaic-item mosaic-about">
+                            <div class="aboutme-desc">
+                                <span class="available-highlight">Available to work</span>
+                            </div>
+                            <div class="mosaic-content aboutme-flex" style="flex-direction:column; align-items:flex-start; gap:10px;">
+                                <div class="aboutme-row" style="display:flex;align-items:center;gap:18px;">
+                                    <img src="/images/logos/linkedin-logo.png" alt="Profile picture" class="aboutme-profile-pic" />
+                                    <div class="aboutme-info">
+                                        <h4>Elliott Schmechel</h4>
+                                        <div>Game Programmer</div>
+                                    </div>
+                                </div>
+                                <div class="aboutme-subinfo">
+                                    <span><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/internetarchive.svg" alt="English" class="aboutme-subicon" /> English</span>
+                                    <span><img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/solid/map-pin.svg" alt="Vancouver, BC" class="aboutme-subicon" /> Vancouver, BC</span>
+                                    <span style="display:flex;gap:8px;padding:0;background:none;border:none;box-shadow:none;">
+                                        <span><img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/solid/clock.svg" alt="UTC+7" class="aboutme-subicon" /> UTC+7</span>
+                                        <span><img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/solid/calendar.svg" alt="19y/o" class="aboutme-subicon" /> 19y/o</span>
+                                    </span>
+                                </div>
+                                <div class="aboutme-actions">
+                                    <a href="/resume.pdf" class="aboutme-btn aboutme-btn-secondary" target="_blank" rel="noopener">
+                                        <img class="aboutme-btn-icon" src="images/logos/pencil.svg" alt="Resume Icon" />
+                                        Resume
+                                    </a>
+                                    <a href="mailto:elliottschmechel@gmail.com" class="aboutme-btn aboutme-btn-contact">
+                                        <img class="aboutme-btn-icon" src="images/logos/mail.svg" alt="Mail Icon" />
+                                        Contact Me
+                                    </a>
+                                    <a href="https://linkedin.com/in/eschmechel" class="aboutme-btn aboutme-btn-secondary" target="_blank" rel="noopener">
+                                        <img class="aboutme-btn-icon" src="images/logos/linkedin-logo.svg" alt="Linkedin Page" />
+                                        Linkedin
+                                    </a>
+                                    <a href="https://github.com/eschmechel" class="aboutme-btn aboutme-btn-contact" target="_blank" rel="noopener">
+                                        <img class="aboutme-btn-icon" src="images/logos/github-logo.svg" alt="GitHub Logo" />
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mosaic-item mosaic-tech">
+                            <div class="mosaic-label">Tech Stack</div>
+                            <div class="mosaic-content">
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/python-logo.svg" alt="Python" style="width:24px;height:24px;" /></span>
+                                    Python
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/cpp-logo.svg" alt="C++" style="width:24px;height:24px;" /></span>
+                                    C++
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/csharp-logo.svg" alt="C#" style="width:24px;height:24px;" /></span>
+                                    C#
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/unity-logo.svg" alt="Unity" style="width:24px;height:24px;" /></span>
+                                    Unity
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/unrealengine-logo.svg" alt="Unreal" style="width:24px;height:24px;" /></span>
+                                    Unreal
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/aws-logo-2.svg" alt="AWS" style="width:24px;height:24px;" /></span>
+                                    AWS
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/docker-logo.svg" alt="Docker" style="width:24px;height:24px;" /></span>
+                                    Docker
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/git-logo.svg" alt="Git" style="width:24px;height:24px;" /></span>
+                                    Git
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/linux-logo.svg" alt="Linux" style="width:24px;height:24px;" /></span>
+                                    Linux
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/regex-logo.svg" alt="Regex" style="width:24px;height:24px;" /></span>
+                                    Regex
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/blender-logo.svg" alt="Blender" style="width:24px;height:24px;" /></span>
+                                    Blender
+                                </span>
+                                <span class="tech-stack-pill">
+                                    <span class="tech-stack-logo"><img src="images/logos/cloudflare-logo.svg" alt="Cloudflare" style="width:24px;height:24px;" /></span>
+                                    Cloudflare
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mosaic-item mosaic-projects-count">     
+                            <div class="mosaic-content mosaic-number-content">
+                                <a href="/projects.html" class="aboutme-btn aboutme-btn-secondary mosaic-label-bottom mosaic-projects-count-link" target="_blank" rel="noopener" style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:max-content;display:block;cursor:pointer;">
+                                    <span style="font-size:1.1em;font-weight:700;color:#fff;letter-spacing:0.01em;">Projects</span>
+                                </a>
+                                <h2 class="mosaic-number">12+</h2>
+                            </div>
+                        </div>
+                        <div class="mosaic-item mosaic-years-exp">
+                            <div class="mosaic-content mosaic-number-content">
+                                <h2 class="mosaic-number">6+</h2>
+                                <div class="mosaic-label mosaic-label-bottom">Experience</div>
+                            </div>
+                        </div>
+                        <div class="mosaic-item mosaic-projects-list">
+                            <div class="mosaic-label">Featured Projects</div>
+                            <div class="mosaic-content">
+                                <div style="margin-bottom:10px;">
+                                    <strong>Game Engine X</strong><br>
+                                    <span style="color:#b39ddb;font-size:0.98em;">Custom C++/OpenGL engine for 2D/3D games.</span>
+                                </div>
+                                <div style="margin-bottom:10px;">
+                                    <strong>Portfolio Website</strong><br>
+                                    <span style="color:#b39ddb;font-size:0.98em;">This site! Built with vanilla JS, CSS, and a Markdown-powered blog workflow.</span>
+                                </div>
+                                <div style="margin-bottom:10px;">
+                                    <strong>JamCraft</strong><br>
+                                    <span style="color:#b39ddb;font-size:0.98em;">A multiplayer game jam entry using Unity and Mirror networking.</span>
+                                </div>
+                                <div>
+                                    <strong>Procedural Terrain Tool</strong><br>
+                                    <span style="color:#b39ddb;font-size:0.98em;">A C# tool for generating and visualizing procedural landscapes in Unity.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mosaic-item mosaic-timeline">
+                            <div class="mosaic-label">Timeline</div>
+                            <div class="mosaic-content" style="display:flex;align-items:center;justify-content:center;height:100%;width:100%;padding:0;">
+                                <svg viewBox="0 0 1000 220" width="100%" height="220" style="max-width:100%; min-width:0; display:block;">
+                                    <!-- Timeline line -->
+                                    <line x1="100" y1="60" x2="900" y2="60" stroke="#a259f7" stroke-width="4" />
+                                    <!-- Events -->
+                                    <circle cx="250" cy="60" r="16" fill="#a259f7" />
+                                    <circle cx="550" cy="60" r="16" fill="#6d36c7" />
+                                    <circle cx="900" cy="60" r="12" fill="#a259f7" />
+                                    <!-- Event labels using foreignObject for wrapping -->
+                                    <foreignObject x="170" y="85" width="160" height="80">
+                                      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#fff;font-size:1.25em;font-weight:700;text-align:center;line-height:1.2;">
+                                        September 2024<br/>
+                                        <span style="color:#b39ddb;font-size:0.85em;font-weight:400;">Started at Langara College</span>
+                                      </div>
+                                    </foreignObject>
+                                    <foreignObject x="470" y="85" width="180" height="100">
+                                      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#fff;font-size:1.25em;font-weight:700;text-align:center;line-height:1.2;">
+                                        November 2024<br/>
+                                        <span style="color:#b39ddb;font-size:0.85em;font-weight:400;">Started work as a AI Red Teamer<br/>at Data Annotation</span>
+                                      </div>
+                                    </foreignObject>
+                                    <foreignObject x="850" y="85" width="120" height="60">
+                                      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#a259f7;font-size:1.15em;font-weight:700;text-align:center;line-height:1.2;">Present</div>
+                                    </div>
+                                    </foreignObject>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div> 
