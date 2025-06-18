@@ -37,10 +37,6 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.getElementById('fade-overlay')?.classList.add('fade-out');
-    }, 200);
-
     // Modal logic (ensure this runs after DOM is ready)
     document.querySelectorAll('.project-card a').forEach((btn, idx) => {
         btn.addEventListener('click', function(e) {

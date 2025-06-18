@@ -203,21 +203,6 @@ footer {
     color: #b39ddb;
 }
 
-#fade-overlay {
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #181818;
-    opacity: 1;
-    pointer-events: none;
-    transition: opacity 1.2s cubic-bezier(0.4,0,0.2,1);
-}
-#fade-overlay.fade-out {
-    opacity: 0;
-}
-
 @media (max-width: 900px) {
     main {
         max-width: 100%;
