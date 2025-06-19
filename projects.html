@@ -1,195 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects | Elliott Schmechel</title>
-        <link rel="icon" type="image/png" href="/favicon.png">
-        <link rel="stylesheet" href="/stylesheets/projects.css">
-        <script src="/js-scripts/projects.js"></script>
-        <link rel="canonical" href="https://eschmechel.dev/projects.html" />
-    </head>
-    <body>
-        <div class="hero-bg"></div>
-        <div id="main-content">
-            <header>
-                <h1>Projects</h1>
-                <nav>
-                    <a href="/index.html">Home</a>
-                    <a href="/projects.html">Projects</a>
-                    <a href="/blog.html">Blog</a>
-                    <a href="/aboutme.html">About</a>
-                </nav>
-            </header>
-            <main>
-                <section>
-                    <h2>Featured Projects</h2>
-                    <div class="project-list">
-                        <!-- First row -->
-                        <div class="project-card"> <!--Project 1-->
-                            <img class="project-image" src="" alt="Project One Showcase" />
-                            <h3>Project One</h3>
-                            <h4 class="project-subtitle">Project One Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project One. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Elliott Schmechel</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/stylesheets/projects.css">
+    <script src="/js-scripts/projects.js"></script>
+    <link rel="canonical" href="https://eschmechel.dev/projects.html" />
+</head>
+<body>
+    <div id="main-content">
+        <header>
+            <h1>Projects</h1>
+            <nav aria-label="Main navigation">
+                <a href="/index.html">Home</a>
+                <a href="/projects.html" aria-current="page">Projects</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/aboutme.html">About</a>
+            </nav>
+        </header>
+        <main>
+            <section class="featured-projects-section">
+                <h2 class="featured-header">Featured Projects</h2>
+                <div class="featured-projects" role="list">
+                    <!-- Repeat for each featured project -->
+                    <article class="project-card" role="listitem">
+                        <img class="project-image" src="images/blogs/blog-01/blog01-pic1.png" alt="Portfolio Website Code Showcase" />
+                        <h3>Portfolio Website</h3>
+                        <h4 class="project-subtitle">Showcasing projects & skills</h4>
+                        <div class="project-desc" hidden>
+                            This is the hidden description for Project One. It will only show in the showcase modal.
+                        </div>
+                        <div class="project-timeline" hidden>
+                            June 2025 - Present
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="view-details">View Details</a>
+                            <div class="tech-icons" aria-label="Tech stack">
+                                <img src="https://skillicons.dev/icons?i=html" alt="HTML5" title="HTML5" />
+                                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
+                                <img src="https://skillicons.dev/icons?i=css" alt="CSS3" title="CSS3" />
                             </div>
                         </div>
-                        <div class="project-card"> <!--Project 2-->
-                            <img class="project-image" src="" alt="Project Two Showcase" />
-                            <h3>Project Two</h3>
-                            <h4 class="project-subtitle">Project Two Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project Two. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card"> <!--Project 3-->
-                            <img class="project-image" src="" alt="Project Three Showcase" />
-                            <h3>Project Three</h3>
-                            <h4 class="project-subtitle">Project Three Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project Three. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Second row -->
-                        <div class="project-card"> <!--Project 4-->
-                            <img class="project-image" src="" alt="Project Four Showcase" />
-                            <h3>Project Four</h3>
-                            <h4 class="project-subtitle">Project Four Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project Four. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card"> <!--Project 5-->
-                            <img class="project-image" src="" alt="Project Five Showcase" />
-                            <h3>Project Five</h3>
-                            <h4 class="project-subtitle">Project Five Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project Five. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card"> <!--Project 6-->
-                            <img class="project-image" src="" alt="Project Six Showcase" />
-                            <h3>Project Six</h3>
-                            <h4 class="project-subtitle">Project Six Subtitle</h4>
-                            <div class="project-desc" style="display:none;">
-                                This is the hidden description for Project Six. It will only show in the showcase modal.
-                            </div>
-                            <div class="project-timeline" style="display:none;">
-                                August 2024 - Present
-                            </div> 
-                            <div class="project-actions">
-                                <a href="#">View Details</a>
-                                <div class="tech-icons">
-                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
-                                    <img src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-                                    <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="project-list-section" id="all-projects">
-                    <h2 class="project-list-title">All Projects</h2>
-                    <div class="project-list-cards">
-                        <!-- Example project card, copy and update for each project -->
-                        <div class="project-list-card">
-                            <a href="#" class="project-list-card-img-link" onclick="showProjectModal(0); return false;">
-                                <img src="/images/sample-project-image.jpg" alt="Project One" class="project-list-card-img">
-                            </a>
-                            <div class="project-list-card-content">
-                                <a href="#" class="project-list-card-title" onclick="showProjectModal(0); return false;">Project One</a>
-                                <div class="project-list-card-meta">2024 &bull; Python, React</div>
-                                <div class="project-list-card-desc">A short description of Project One. This project demonstrates X, Y, and Z features in a modern, scalable way.</div>
-                            </div>
-                        </div>
-                        <div class="project-list-card">
-                            <a href="#" class="project-list-card-img-link" onclick="showProjectModal(1); return false;">
-                                <img src="/images/sample-project-image.jpg" alt="Project Two" class="project-list-card-img">
-                            </a>
-                            <div class="project-list-card-content">
-                                <a href="#" class="project-list-card-title" onclick="showProjectModal(1); return false;">Project Two</a>
-                                <div class="project-list-card-meta">2023 &bull; JavaScript, Node.js</div>
-                                <div class="project-list-card-desc">A short description of Project Two. This project is focused on A, B, and C, with a focus on usability and performance.</div>
-                            </div>
-                        </div>
-                        <!-- Add more project-list-card blocks as needed -->
-                    </div>
-                </section>
-            </main>
-            <footer>
-                <div class="footer-links">
-                    <a href="/index.html">Home</a>
-                    <a href="/projects.html">Projects</a>
-                    <a href="/blog.html">Blog</a>
-                    <a href="/aboutme.html">About</a>
+                    </article>
+                    <!-- ...repeat for other featured projects... -->
                 </div>
-                <div class="footer-copy">
-                    <span>&copy; 2025 Elliott Schmechel</span> |
-                    <span>MIT License</span>
+            </section>
+            <section class="project-list-section" id="all-projects">
+                <h2 class="project-list-title">All Projects</h2>
+                <div class="project-list-cards">
+                    <article class="project-list-card">
+                        <a href="" class="project-list-card-img-link" aria-label="Project One details">
+                            <img src="/images/blogs/blog-01/blog01-pic1.png" alt="Portfolio Website Code Showcase" class="project-list-card-img">
+                        </a>
+                        <div class="project-list-card-content">
+                            <a href="#" class="project-list-card-title">Portfolio Website</a>
+                            <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;height:28px;">
+                                <div class="project-list-card-meta" style="font-size:1.1em;line-height:1;height:28px;display:flex;align-items:center;">June 2025 - Present</div>
+                                <div class="tech-icons" style="margin:0;gap:6px;height:28px;display:flex;align-items:flex-start;position:relative;top:-2px;">
+                                    <img src="https://skillicons.dev/icons?i=html" alt="HTML5" title="HTML5" />
+                                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
+                                    <img src="https://skillicons.dev/icons?i=css" alt="CSS3" title="CSS3" />
+                                </div>
+                            </div>
+                            <div class="project-list-card-desc">A personal portfolio website to showcase my projects, skills, and experience using modern web technologies.</div>
+                        </div>
+                    </article>
+                    <!-- ...repeat for other all-projects cards... -->
                 </div>
-            </footer>
-        </div>
-        <div id="project-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-project"></div>
-                <div class="modal-gallery"></div>
-                <button class="modal-close">&times;</button>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-links">
+                <a href="/index.html">Home</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/aboutme.html">About</a>
             </div>
+            <div class="footer-copy">
+                <span>&copy; 2025 Elliott Schmechel</span> |
+                <span>MIT License</span>
+            </div>
+        </footer>
+    </div>
+    <div id="project-modal" class="modal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <div class="modal-project"></div>
+            <div class="modal-gallery"></div>
+            <button class="modal-close" aria-label="Close project details">&times;</button>
         </div>
-    </body>
+    </div>
+</body>
 </html>

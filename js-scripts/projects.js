@@ -1,93 +1,97 @@
-// Rotating hero background using project images
-
-//Rotating background images
-const images = [
-    // Use your actual project image URLs here, or sample images for now
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80"
-];
-
-let idx = 0;
-function rotateHeroBg() {
-    const hero = document.querySelector('.hero-bg');
-    if (hero) {
-        hero.style.backgroundImage = `url('${images[idx]}')`;
-        idx = (idx + 1) % images.length;
-    }
-}
-
-// Initial set and interval
-rotateHeroBg();
-setInterval(rotateHeroBg, 4000);
-
-// Smoothly shrink hero background as you scroll down
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero-bg');
-    if (!hero) return;
-    const startHeight = 68; // vh
-    const endHeight = 20;   // vh
-    const scrollY = window.scrollY || window.pageYOffset;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    // Calculate scroll progress (0 at top, 1 at bottom)
-    let progress = Math.min(scrollY / (docHeight || 1), 1);
-    // Interpolate height
-    const newHeight = startHeight - (startHeight - endHeight) * progress;
-    hero.style.height = `${newHeight}vh`;
-});
-
 window.addEventListener('DOMContentLoaded', () => {
-    // Modal logic (ensure this runs after DOM is ready)
-    document.querySelectorAll('.project-card a').forEach((btn, idx) => {
+    // Modal logic for featured project cards
+    document.querySelectorAll('.project-card .view-details').forEach((btn, idx) => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            showProjectModal(idx);
+            openProjectModal('featured', idx);
+        });
+    });
+
+    // Modal logic for all project list cards
+    document.querySelectorAll('.project-list-card').forEach((card, idx) => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            openProjectModal('list', idx);
+        });
+        card.querySelectorAll('a, img').forEach(el => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                openProjectModal('list', idx);
+            });
         });
     });
 
     document.querySelector('.modal-close').onclick = function() {
         document.getElementById('project-modal').classList.remove('show');
-        document.body.classList.remove('modal-open'); // Add this line
+        document.body.classList.remove('modal-open');
     };
     document.getElementById('project-modal').onclick = function(e) {
         if (e.target === this) {
             this.classList.remove('show');
-            document.body.classList.remove('modal-open'); // Add this line
+            document.body.classList.remove('modal-open');
         }
     };
 });
 
-function showProjectModal(idx) {
-    // Get the project card
-    const projectCards = document.querySelectorAll('.project-card');
-    const card = projectCards[idx];
+// All projects data (single source of truth)
+const allProjects = [
+    {
+        title: 'Portfolio Website',
+        desc: 'Built as a minimalist, accessible, and reliable portfolio after learning from over-design and "tutorial hell." Inspired by satirical sites like <a href="https://motherfuckingwebsite.com" target="_blank" rel="noopener">motherfuckingwebsite.com</a>, this project focuses on MVP, accessibility, and best practices. It is a site I can be proud of, reflecting my journey from overcomplication to simplicity and personal growth.',
+        img: '/images/blogs/blog-01/blog01-pic1.png',
+        imgAlt: 'Portfolio Website Code Showcase',
+        subtitle: 'Showcasing projects & skills',
+        tech: [
+            { src: 'https://skillicons.dev/icons?i=html', alt: 'HTML5', title: 'HTML5' },
+            { src: 'https://skillicons.dev/icons?i=js', alt: 'JavaScript', title: 'JavaScript' },
+            { src: 'https://skillicons.dev/icons?i=css', alt: 'CSS3', title: 'CSS3' }
+        ],
+        timeline: 'June 2025 - Present',
+        github: 'https://github.com/eschmechel/Portfolio-Page',
+        blog: '/blogs/blog-01.html',
+    }
+    // Add more all projects here
+];
 
-    // Extract info from the card
-    const imgSrc = card.querySelector('.project-image')?.getAttribute('src') || '';
-    const imgAlt = card.querySelector('.project-image')?.getAttribute('alt') || '';
-    const title = card.querySelector('h3')?.textContent || '';
-    const subtitle = card.querySelector('.project-subtitle')?.textContent || '';
-    const desc = card.querySelector('.project-desc')?.innerHTML || '';
-    const techIcons = card.querySelector('.tech-icons')?.innerHTML || '';
-    const timeline = card.querySelector('.project-timeline')?.textContent || '';
+// Featured projects references allProjects by index
+const featuredProjects = [
+    allProjects[0], // Portfolio Website
+    // Add more featured projects by referencing allProjects indices
+];
 
-    // Left: title at top, subtitle underneath, gap, then description, then tech stack, then timeline
+function openProjectModal(type, idx) {
+    let data;
+    if (type === 'featured') {
+        data = featuredProjects[idx];
+    } else {
+        data = allProjects[idx];
+    }
+    if (!data) return;
+    // Unified modal content for both types, timeline and tech stack in a row
     const modalProject = document.querySelector('.modal-project');
     modalProject.innerHTML = `
-        <h3 style="margin:0 0 8px 0;">${title}</h3>
-        <h4 class="project-subtitle" style="margin:0 0 20px 0;">${subtitle}</h4>
-        <p style="margin:0 0 24px 0;">${desc}</p>
-        <div class="tech-icons" style="margin-bottom:16px;">${techIcons}</div>
-        <div class="project-timeline" style="font-size:1.05em;color:#b39ddb;margin-top:8px;">
-            ${timeline}
+        <div style=\"flex:1;width:100%;height:100%;display:flex;flex-direction:column;position:relative;font-size:1.13em;\">
+            <div>
+                <h3 style=\"margin:0 0 10px 0;font-size:2.1em;\">${data.title}</h3>
+                ${data.subtitle ? `<h4 class=\"project-subtitle\" style=\"margin:0 0 22px 0;font-size:1.25em;\">${data.subtitle}</h4>` : ''}
+                <div style=\"display:flex;align-items:center;gap:16px;margin-bottom:14px;\">
+                    ${data.timeline ? `<div style=\"color:#b39ddb;font-size:1.13em;line-height:1;height:32px;display:flex;align-items:center;\">${data.timeline}</div>` : ''}
+                    ${data.tech ? `<div class=\"tech-icons\" style=\"margin:0;gap:8px;height:32px;display:flex;align-items:flex-start;position:relative;top:-2px;\">${data.tech.map(t => `<img src='${t.src}' alt='${t.alt}' title='${t.title}' />`).join('')}</div>` : ''}
+                </div>
+                <hr style=\"border:0;border-top:1.5px solid #b7aaff;margin:0 0 20px 0;opacity:0.25;\">
+                <p style=\"margin:0 0 28px 0;line-height:1.5;background:rgba(35,34,50,0.65);padding:18px 22px;border-radius:10px;box-shadow:0 2px 8px rgba(24,24,37,0.08);font-size:1.08em;\">${data.desc}</p>
+            </div>
+            <div style=\"margin-top:auto;position:absolute;left:0;right:0;bottom:80px;padding-left:32px;font-size:1.08em;color:#b39ddb;z-index:9;\">${data.extra ? data.extra : ''}</div>
+        </div>
+        <div class=\"modal-btn-row\">
+            ${data.github ? `<a href='${data.github}' target='_blank' rel='noopener' class='github-btn'>View GitHub Repo</a>` : ''}
+            ${data.blog ? `<a href='${data.blog}' target='_blank' rel='noopener' class='blog-btn'>View Blog Post</a>` : ''}
         </div>
     `;
-
     const modalGallery = document.querySelector('.modal-gallery');
     modalGallery.innerHTML = `
-        <img src="${imgSrc}" alt="${imgAlt}" style="max-width:100%;max-height:400px;border-radius:8px;">
+        <img src=\"${data.img}\" alt=\"${data.imgAlt}\" style=\"max-width:100%;max-height:400px;border-radius:8px;\">
     `;
-
     document.getElementById('project-modal').classList.add('show');
     document.body.classList.add('modal-open');
 }

@@ -1,7 +1,8 @@
-html,body{
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,20 +16,20 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-#main-content {
-   flex: 1 0 auto;
-}
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    margin: 0;
+    margin-top: 18px;
+    margin-bottom: 0;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
     color: #b7aaff;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 nav {
@@ -37,19 +38,22 @@ nav {
     align-items: center;
     background: #181825ee;
     padding: 12px 24px;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 2px 8px rgba(24,24,37,0.18);
     border: 1.5px solid #3a335a;
     border-radius: 8px;
+    color: #d1c7f7;
+    font-size: 1.13em;
+    gap: 4px;
 }
 
 nav a {
     color: #f3f3f3;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1.13em;
     padding: 8px 8px;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
@@ -100,16 +104,27 @@ footer {
     font-size: 0.95em;
     color: #d1c7f7;
 }
-section a {
+
+section a, .main-content a {
     color: #a48cf7;
     text-decoration: underline;
     transition: color 0.2s;
 }
-section a:hover {
+
+section a:hover, .main-content a:hover {
     color: #e0d7ff;
     background: #3a335a;
     border-radius: 3px;
 }
+
+.card, .aboutme-card {
+    background: #181825ee;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(24,24,37,0.18);
+    border: 1.5px solid #3a335a;
+    color: #f3f3f3;
+}
+
 .contact-links {
     display: flex;
     flex-direction: row;
@@ -122,6 +137,7 @@ section a:hover {
     max-width: 420px;
     gap: 0;
 }
+
 .contact-links > li {
     display: flex;
     flex-direction: column;
@@ -133,9 +149,11 @@ section a:hover {
     text-align: center;
     gap: 0.2em;
 }
+
 .contact-links > li:last-child {
     margin-right: 0;
 }
+
 .contact-links a {
     display: flex;
     flex-direction: column;
@@ -146,10 +164,12 @@ section a:hover {
     transition: color 0.2s;
     gap: 0.2em;
 }
+
 .contact-links a:hover {
     color: #fff;
     text-decoration: underline;
 }
+
 .contact-links .contact-icon {
     width: 38px;
     height: 38px;
@@ -164,9 +184,11 @@ section a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
 .contact-links .contact-icon:hover {
     transform: scale(1.08);
 }
+
 .aboutme-card {
     background: #232232ee;
     border-radius: 18px;
@@ -181,16 +203,19 @@ section a:hover {
     gap: 18px;
     position: relative;
 }
+
 @media (max-width: 700px) {
     .aboutme-card {
         padding: 0 8px 56px 8px;
     }
 }
+
 @media (max-width: 900px) {
     .aboutme-card {
         padding: 0 8px 56px 8px;
     }
 }
+
 .tech-icons-row {
     display: flex;
     flex-wrap: wrap;
@@ -199,6 +224,7 @@ section a:hover {
     align-items: center;
     margin: 16px 0 24px 0;
 }
+
 .tech-icon {
     width: 44px;
     height: 44px;
@@ -213,16 +239,19 @@ section a:hover {
     object-fit: contain;
     background-color: transparent;
 }
+
 .tech-icon.aws-icon {
     background: #fff;
     border: 1px solid #eee;
     padding: 4px;
 }
+
 .tech-icon.tryhackme-icon {
     background: #fff;
     border-radius: 8px;
     padding: 4px;
 }
+
 .tech-icon.broken-icon {
     background: #232232;
     color: #a259f7;
@@ -231,17 +260,20 @@ section a:hover {
     justify-content: center;
     font-size: 1.5em;
 }
+
 .tech-icon:hover, .tech-icon:focus {
     transform: scale(1.13) translateY(-4px) rotate(-2deg);
     opacity: 1;
     box-shadow: 0 4px 18px 0 rgba(80,80,80,0.18);
     background: rgba(255,255,255,0.07);
 }
+
 .tech-icons-row img[alt="TryHackMe"] {
     background: #232232ef;
     border-radius: 8px;
     padding: 4px;
 }
+
 .tech-icon[src*="AWS-services-section.png"] {
     background: #fff;
     border-radius: 8px;
@@ -249,6 +281,7 @@ section a:hover {
     padding: 0;
     /* Remove padding to maximize image area */
 }
+
 .tech-icon[src*="AWS-services-section.png"] {
     /* Use background-size to center and scale the logo */
     background: #fff url('/images/logos/aws-logo.png') no-repeat center center;
@@ -256,6 +289,7 @@ section a:hover {
     /* Hide the actual image, show only the background */
     opacity: 0;
 }
+
 .tech-icon[src*="AWS-services-section.png"]::after {
     content: '';
     display: block;
@@ -267,6 +301,7 @@ section a:hover {
     background-position: center;
     opacity: 1;
 }
+
 @media (max-width: 600px) {
     .tech-icons-row {
         gap: 10px;
