@@ -42,9 +42,9 @@ const allProjects = [
         imgAlt: 'Portfolio Website Code Showcase',
         subtitle: 'Showcasing projects & skills',
         tech: [
-            { src: 'https://skillicons.dev/icons?i=html', alt: 'HTML5', title: 'HTML5' },
-            { src: 'https://skillicons.dev/icons?i=js', alt: 'JavaScript', title: 'JavaScript' },
-            { src: 'https://skillicons.dev/icons?i=css', alt: 'CSS3', title: 'CSS3' }
+            { src: 'images/logos/html5-logo.svg', alt: 'HTML5', title: 'HTML5' },
+            { src: 'images/logos/js-logo.svg', alt: 'JavaScript', title: 'JavaScript' },
+            { src: 'images/logos/css3-logo.svg', alt: 'CSS3', title: 'CSS3' }
         ],
         timeline: 'June 2025 - Present',
         github: 'https://github.com/eschmechel/Portfolio-Page',
