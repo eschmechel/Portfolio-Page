@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const allProjects = [
     {
         title: 'Portfolio Website',
-        desc: 'Built as a minimalist, accessible, and reliable portfolio after learning from over-design and "tutorial hell." Inspired by satirical sites like <a href="https://motherfuckingwebsite.com" target="_blank" rel="noopener">motherfuckingwebsite.com</a>, this project focuses on MVP, accessibility, and best practices. It is a site I can be proud of, reflecting my journey from overcomplication to simplicity and personal growth.',
+        desc: 'Built as a minimalist, accessible, and reliable portfolio after learning from over-design and "tutorial hell." Inspired by satirical sites like <a href="https://motherfuckingwebsite.com" target="_blank" rel="noopener">motherfuckingwebsite.com</a>, this project focuses on <abbr title="Minimal Viable Product">MVP</abbr>, accessibility, and best practices. It is a site I can be proud of, reflecting my journey from overcomplication to simplicity and personal growth.',
         img: '/images/blogs/blog-01/blog01-pic1.png',
         imgAlt: 'Portfolio Website Code Showcase',
         subtitle: 'Showcasing projects & skills',
